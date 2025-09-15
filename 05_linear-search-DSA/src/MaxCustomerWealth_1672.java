@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/richest-customer-wealth/description/
 
-public class MaxCustomerWealth {
+public class MaxCustomerWealth_1672 {
     public static void main(String[] args) {
         int[][] arr = {{1,2,5},{3,2,1}};
         int RichestWealth = maximumWealth(arr);
