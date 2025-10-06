@@ -1,18 +1,27 @@
 public class CeilingOfNum {
     public static void main(String[] args) {
-//        int[] arr = {-18, -12, -4, 0, 2, 3, 4, 15, 16, 18, 22, 45, 89};
-        int[] arr = {89,46,24,6,3,0,-1};
-        int target = -1;
-        int ans = binarySearch(arr, target);
+        int[] arr = {-18, -12, -4, 0, 2, 3, 4, 15, 16, 18, 22, 45, 89};
+//        int[] arr = {89,46,24,6,3,0,-1};
+        int target = 90;
+        int ans = ceiling(arr, target);
         System.out.println(ans);
     }
 
 
-    static int binarySearch(int[] arr, int target) {
+    static int ceiling(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
         boolean isAsc = arr[start] < arr[end];
 
+        if(isAsc){
+            if(target > arr[arr.length - 1])
+                return -1;
+
+        }else{
+            if(target > arr[0])
+                return -1;
+
+        }
 
         while(start <= end){
 
