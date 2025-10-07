@@ -1,5 +1,6 @@
-public class EvenNumDigits_1295 {
-    // https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
+// https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
+
+public class Q_1295EvenNumDigits {
     public static void main(String[] args) {
         int[] arr = {12,231,1,4234};
         int ans = evenNumDigits(arr);
