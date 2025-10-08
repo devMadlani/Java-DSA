@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/
 
+package leetcode;
+
 public class Q_744_smallestLetter {
     public static void main(String[] args) {
         char[] arr = {'c','f','j'};
