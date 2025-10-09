@@ -7,18 +7,18 @@ public class BinarySearch {
     }
 
 
-    static int binarySearch(int[] arr, int target) {
+    static int binarySearch(int[] nums, int target) {
         int start = 0;
-        int end = arr.length - 1;
+        int end = nums.length - 1;
 
         while (start <= end) {
             // find the middle element
             // int mid = (start + end) / 2; // might be possible that (start + end) exceeds the range of int in java
             int mid = start + (end - start) / 2;
 
-            if (target > arr[mid]) {
+            if (target > nums[mid]) {
                 start = mid + 1;
-            } else if (target < arr[mid]) {
+            } else if (target < nums[mid]) {
                 end = mid - 1;
             } else {
                 return mid;
