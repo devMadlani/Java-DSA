@@ -13,36 +13,35 @@ public class CeilingOfNum {
         int end = arr.length - 1;
         boolean isAsc = arr[start] < arr[end];
 
-        if(isAsc){
-            if(target > arr[arr.length - 1])
+        if (isAsc) {
+            if (target > arr[arr.length - 1])
                 return -1;
 
-        }else{
-            if(target > arr[0])
+        } else {
+            if (target > arr[0])
                 return -1;
-
         }
 
-        while(start <= end){
+        while (start <= end) {
 
             int mid = start + (end - start) / 2;
-            if(arr[mid] == target){
+            if (arr[mid] == target) {
                 return mid;
             }
-            if(isAsc){
-                if(target > arr[mid]) {
+            if (isAsc) {
+                if (target > arr[mid]) {
                     start = mid + 1;
-                } else if(target < arr[mid]){
+                } else if (target < arr[mid]) {
                     end = mid - 1;
                 }
             } else {
-                if(target < arr[mid]) {
+                if (target < arr[mid]) {
                     start = mid + 1;
-                } else if(target > arr[mid]){
+                } else if (target > arr[mid]) {
                     end = mid - 1;
                 }
             }
         }
-        return  isAsc ? start : end;
+        return isAsc ? start : end;
     }
 }
