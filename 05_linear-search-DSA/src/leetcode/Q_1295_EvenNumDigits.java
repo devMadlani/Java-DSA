@@ -1,8 +1,9 @@
 // https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
+package leetcode;
 
-public class Q_1295EvenNumDigits {
+public class Q_1295_EvenNumDigits {
     public static void main(String[] args) {
-        int[] arr = {12,231,1,4234};
+        int[] arr = {12,231,1,2222,22,22,22,22};
         int ans = evenNumDigits(arr);
         System.out.println(ans);
     }
@@ -31,6 +32,6 @@ public class Q_1295EvenNumDigits {
 //            num/=10;
 //        }
 //        return count;
-        return (int) (Math.log10(num));
+        return (int) (Math.log10(num)) + 1;
     }
 }

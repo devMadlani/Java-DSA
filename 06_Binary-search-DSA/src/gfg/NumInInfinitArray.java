@@ -25,7 +25,7 @@ public class NumInInfinitArray {
         int start = 0;
         int end = 1;
         while (target > nums[end]) {
-            int newStart =  end + 1;
+            int newStart = end + 1;
             // end = prev end + sizeofBox*2
             end = end + (end - start + 1) * 2;
             start = newStart;
@@ -35,19 +35,16 @@ public class NumInInfinitArray {
     }
 
     static int binarySearch(int[] arr, int target, int start, int end) {
-        boolean isAsc = arr[start] < arr[end];
-        while (start <= end) {
 
+        while (start <= end) {
             int mid = start + (end - start) / 2;
-            if (arr[mid] == target) {
-                System.out.println(arr[mid]);
-                return mid;
-            }
 
             if (target > arr[mid]) {
                 start = mid + 1;
             } else if (target < arr[mid]) {
                 end = mid - 1;
+            }else {
+                return mid;
             }
         }
         return -1;
