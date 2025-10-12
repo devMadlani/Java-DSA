@@ -31,7 +31,7 @@ public class Q_33_SearchInRotatedArr {
         return binarySearch(nums, target, pivot + 1, nums.length - 1);
     }
 
-    static int binarySearch(int[] nums, int target, int pivot + 1, int end) {
+    static int binarySearch(int[] nums, int target, int start, int end) {
 
         while (start <= end) {
             // find the middle element
