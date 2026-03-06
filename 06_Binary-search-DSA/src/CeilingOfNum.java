@@ -2,7 +2,7 @@ public class CeilingOfNum {
     public static void main(String[] args) {
         int[] arr = {-18, -12, -4, 0, 2, 3, 4, 15, 16, 18, 22, 45, 89};
 //        int[] arr = {89,46,24,6,3,0,-1};
-        int target = 90;
+        int target = 15;
         int ans = ceiling(arr, target);
         System.out.println(ans);
     }

@@ -2,11 +2,11 @@ package leetcode;
 
 public class Q_35_InsertPos {
     public static void main(String[] args) {
-        int[] nums = {1, 3, 5, 6};
-//        int[] nums = {1, 2, 3, 4, 5, 6, 8, 8, 10, 14};
+//        int[] nums = {1, 3, 5, 6};
+        int[] nums = {1, 2, 3, 4, 5, 6, 8, 8, 10, 14};
 //        int[] nums = {1, 2, 3, 4, 5, 6};
 //        int[] nums = {1, 2, 8, 10, 14};
-        int target = 2;
+        int target = 15;
         System.out.println(insertPosition(nums, target));
     }
 

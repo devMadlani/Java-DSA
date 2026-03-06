@@ -7,19 +7,19 @@ public class Q_81_SearchInRotatedArr2 {
         System.out.println(searchInRotatedArr2(nums, target));
     }
 
-    static boolean searchInRotatedArr2(int[] nums, int target) {
+    static int searchInRotatedArr2(int[] nums, int target) {
         int start = 0;
         int end = nums.length - 1;
         while (start <= end) {
             int mid = start + (end - start) / 2;
             if (nums[mid] == target) {
-                return true;
+                return mid;
             }
-            if (nums[start] == nums[mid] && nums[mid] == nums[end]) {
-                start++;
-                end--;
-                continue;
-            }
+//            if (nums[start] == nums[mid] && nums[mid] == nums[end]) {
+//                start++;
+//                end--;
+//                continue;
+//            }
             if (nums[start] <= nums[mid]) {
                 if (nums[start] <= target && target <= nums[mid]) {
                     end = mid - 1;
@@ -34,6 +34,6 @@ public class Q_81_SearchInRotatedArr2 {
                 }
             }
         }
-        return false;
+        return -1;
     }
 }

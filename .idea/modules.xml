@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01_first-idea-program/01_first-idea-program.iml" filepath="$PROJECT_DIR$/01_first-idea-program/01_first-idea-program.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_conditions-loops/02_conditions-loops.iml" filepath="$PROJECT_DIR$/02_conditions-loops/02_conditions-loops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_functions-methods/03_functions-methods.iml" filepath="$PROJECT_DIR$/03_functions-methods/03_functions-methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_arrays/04_arrays.iml" filepath="$PROJECT_DIR$/04_arrays/04_arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_linear-search-DSA/05_linear-search-DSA.iml" filepath="$PROJECT_DIR$/05_linear-search-DSA/05_linear-search-DSA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_Binary-search-DSA/06_Binary-search-DSA.iml" filepath="$PROJECT_DIR$/06_Binary-search-DSA/06_Binary-search-DSA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java.iml" filepath="$PROJECT_DIR$/.idea/Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Recursion/Recursion.iml" filepath="$PROJECT_DIR$/Recursion/Recursion.iml" />
+    </modules>
+  </component>
+</project>
