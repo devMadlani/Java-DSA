@@ -28,6 +28,7 @@ public class Q_33_SearchInRotatedArr {
         if (target >= nums[0]) {
             return binarySearch(nums, target, 0, pivot - 1);
         }
+        
         return binarySearch(nums, target, pivot + 1, nums.length - 1);
     }
 
