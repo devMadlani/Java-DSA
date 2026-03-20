@@ -1,4 +1,4 @@
-public class BinarySearchTree {
+public class AVL {
     public class Node {
         private int val;
         private int height;
@@ -16,8 +16,10 @@ public class BinarySearchTree {
 
     private Node root;
 
-
-    public int height(Node node) {
+    public int height(){
+        return height(root);
+    }
+    private int height(Node node) {
         if (node == null) {
             return -1;
 
@@ -45,10 +47,62 @@ public class BinarySearchTree {
         }
 
         node.height = Math.max(height(node.left), height(node.right)) + 1;
-        return node;
+        return rotate(node);
     }
+    private Node rotate(Node node){
+        if(height(node.left) - height(node.right) > 1){
+            // left heave
+            if(height(node.left.left) - height(node.left.right) > 0){
+                //left-left case
+                return rightRotate(node);
+            }
+            if(height(node.left.left) - height(node.left.right) < 0){
+                //left-right case
+                node.left = leftRotate(node.left);
+                return rightRotate(node);
+            }
+        }
+        if(height(node.left) - height(node.right) < -1){
+            // right heave
+            if(height(node.right.left) - height(node.right.right) < 0){
+                //right-right case
+                return leftRotate(node);
+            }
+            if(height(node.right.left) - height(node.right.right) > 0){
+                //right-left case
+                node.right = rightRotate(node.right);
+                return leftRotate(node);
+            }
+        }
+        return  node;
+    }
+
+    private Node rightRotate(Node p) {
+        Node c = p.left;
+        Node t = p.left.right;
+        c.right = p;
+        p.left = t;
+
+        p.height = Math.max(height(p.left), height(p.right)) + 1;
+        c.height = Math.max(height(c.left), height(c.right)) + 1;
+        return c;
+    }
+    private Node leftRotate(Node c) {
+          Node p = c.right;
+          Node t = p.left;
+          p.left = c;
+          c.right = t;
+
+        p.height = Math.max(height(p.left), height(p.right)) + 1;
+        c.height = Math.max(height(c.left), height(c.right)) + 1;
+
+        return p;
+
+    }
+
+
     public void populateSorted(int[] nums){
-            this.populateSorted(nums, 0, nums.length);
+        this.populateSorted(nums, 0, nums.length);
     }
     private void populateSorted(int[] nums, int start, int end){
         if(start >= end){
@@ -88,53 +142,5 @@ public class BinarySearchTree {
             return true;
         }
         return Math.abs(height(node.left) - height(node.right)) <= 1 && isBalanced(node.left) && isBalanced(node.right);
-    }
-
-
-    // Traversal
-    // 1. Pre-Order
-    public void preOrder(){
-        preOrder(root);
-    }
-    private void preOrder(Node node){
-        if(node == null){
-            return;
-        }
-        System.out.print(node.val + " ");
-        preOrder(node.left);
-        preOrder(node.right);
-
-    }
-
-    // 2. In-Order
-    public void inOrder(){
-        inOrder(root);
-    }
-    private void inOrder(Node node){
-        if(node == null){
-            return;
-        }
-        inOrder(node.left);
-        System.out.print(node.val + " ");
-        inOrder(node.right);
-
-    }
-
-<<<<<<< HEAD
-    // 1. Post-Order
-=======
-    // 1. Post-Order sdfsdsdassdsdasds
->>>>>>> 60b5176e424f26e15f02a44d089ff1ccec82f191
-    public void postOrder(){
-        postOrder(root);
-    }
-    private void postOrder(Node node){
-        if(node == null){
-            return;
-        }
-        postOrder(node.left);
-        postOrder(node.right);
-        System.out.print(node.val + " ");
-
     }
 }
