@@ -120,11 +120,7 @@ public class BinarySearchTree {
 
     }
 
-<<<<<<< HEAD
     // 1. Post-Order
-=======
-    // 1. Post-Order sdfsdsdassdsdasds
->>>>>>> 60b5176e424f26e15f02a44d089ff1ccec82f191
     public void postOrder(){
         postOrder(root);
     }
