@@ -14,7 +14,7 @@ public class Q_24_PathExistsAnyPoint {
         path.add(node.val);
         int count = 0;
         int s = 0;
-        // how many path i can take
+        // how many path I can take
 
         ListIterator<Integer> pathItr = path.listIterator(path.size());
         while (pathItr.hasPrevious()) {
