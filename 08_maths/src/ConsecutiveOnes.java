@@ -1,5 +1,5 @@
-public class ConsecutiveZeros {
-    static int consecutiveZeros (int[] arr) {
+public class ConsecutiveOnes {
+    static int consecutiveOnes (int[] arr) {
         int currentCount = 0;
         int maxCount = 0;
         for(int num: arr){
@@ -15,7 +15,7 @@ public class ConsecutiveZeros {
 
     public static void main(String[] args) {
         int[] arr = {1,1,1,1,0,1,1,1};
-        System.out.println(consecutiveZeros(arr));
+        System.out.println(consecutiveOnes(arr));
     }
 
 }

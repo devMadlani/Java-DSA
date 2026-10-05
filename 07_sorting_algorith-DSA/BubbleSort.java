@@ -24,6 +24,7 @@ public class BubbleSort {
             }
         }
     }
+
     static void bubbleSortAsc(int[] arr){
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - i - 1; j++) {
@@ -33,6 +34,8 @@ public class BubbleSort {
             }
         }
     }
+
+//    {3,5,1,6,4,1};
     static void bubbleSmallValue(int[] arr){
         for (int i = 0; i < arr.length - 1; i++) {
             for(int j = arr.length - 1; j > i; j--){

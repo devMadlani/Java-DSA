@@ -1,4 +1,4 @@
-public class PascalTriangleI {
+public class PascalTriangle_I {
     static int pascalTriangleI(int r, int c) {
         int res = 1;
         r--;
